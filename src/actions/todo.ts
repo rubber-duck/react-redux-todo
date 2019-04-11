@@ -1,8 +1,8 @@
 import * as im from 'immutable';
 import { Dispatch } from 'redux';
 import { push } from 'connected-react-router';
-import { ToDoItem } from '../models';
-import * as toDoApi from '../api/todo';
+import { ToDoItem } from '@models';
+import * as toDoApi from '@api/todo';
 
 export const TODO_ITEMS_LOAD = 'TODO_ITEMS_LOAD'
 export const TODO_ITEM_ADD = 'TODO_ITEM_ADD';

@@ -1,7 +1,7 @@
 import React from 'react';
-import { ToDoItem } from './todo-item';
-import * as models from '../../../models';
 import * as enzyme from 'enzyme';
+import * as models from '@models';
+import { ToDoItem } from './todo-item';
 
 
 const selectors = {
@@ -11,7 +11,6 @@ const selectors = {
     editButton: 'button.edit',
     completeButton: 'button.complete'
 }
-
 
 it('ToDoItem renders correct title and description', () => {
     const item = new models.ToDoItem({ id: 1, title: 'Test', description: 'Simple description', complete: false });
@@ -53,7 +52,6 @@ it('ToDoItem does not call remove and setCompleted when clicked', () => {
     expect(editFn).not.toBeCalled();
 });
 
-
 it('ToDoItem does call remove when remove button clicked', () => {
     const item = new models.ToDoItem({ id: 1, title: 'Test', description: 'Simple description', complete: false });
     const removeFn = jest.fn();
@@ -83,7 +81,6 @@ it('ToDoItem does call edit when edit button clicked', () => {
     expect(setCompletedFn).not.toBeCalled();
     expect(editFn).toBeCalledWith(item.id);
 });
-
 
 it('ToDoItem does call completed with correct value when checked', () => {
     const item = new models.ToDoItem({ id: 1, title: 'Test', description: 'Simple description', complete: false });

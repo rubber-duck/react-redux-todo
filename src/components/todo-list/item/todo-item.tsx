@@ -1,8 +1,9 @@
 import React from 'react';
-import * as models from '../../../models';
-import * as actions from '../../../actions';
 import { ButtonGroup, Button, Card } from 'react-bootstrap';
+import * as models from '@models';
+import * as actions from '@actions';
 import './todo-item.scss';
+
 
 export interface ToDoItemProps {
     item: models.ToDoItem;
@@ -30,7 +31,6 @@ export function ToDoItem({ item, itemEdit, itemSetComplete, itemRemove }: ToDoIt
                 {item.description && <p className="description">{item.description}</p>}
             </Card.Body>
         </Card>
-
     </li >;
 }
 

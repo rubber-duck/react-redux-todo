@@ -1,12 +1,12 @@
 import React from 'react';
 import { Dispatch, bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import { Button, Navbar } from 'react-bootstrap';
-import * as models from '../../models';
-import * as actions from '../../actions';
+import * as models from '@models';
+import * as actions from '@actions';
+import * as store from '@store';
 import { ToDoItem } from './item';
-import { Store } from '../../store';
 import './todo-list.scss';
+
 
 export interface ToDoListProps {
     toDoList: models.ToDoList,
@@ -16,7 +16,7 @@ export interface ToDoListProps {
     itemEdit: typeof actions.itemEdit
 }
 
-function mapStateToProps(state: Store) {
+function mapStateToProps(state: store.Store) {
     return {
         toDoList: state.toDoList
     };

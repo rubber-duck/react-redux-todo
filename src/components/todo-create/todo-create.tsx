@@ -1,19 +1,18 @@
 import React from 'react';
-import { Formik } from 'formik';
-import { Form, Button, Card } from 'react-bootstrap';
 import { Dispatch, bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import * as router from 'connected-react-router';
-import { Store } from '../../store';
-import * as actions from '../../actions'
-import { ButtonGroup } from 'react-bootstrap';
+import { Formik } from 'formik';
+import { Form, Button, Card, ButtonGroup } from 'react-bootstrap';
+import * as store from '@store';
+import * as actions from '@actions'
 
 
 export interface ToDoCreateProps {
     itemAdd: typeof actions.itemAdd,
     goBack: typeof router.goBack
 }
-function mapStateToProps(state: Store) {
+function mapStateToProps(state: store.Store) {
     return {};
 }
 

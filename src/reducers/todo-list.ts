@@ -1,6 +1,6 @@
 import * as im from 'immutable';
-import * as actions from '../actions';
-import { ToDoList, ToDoItem } from "../models";
+import * as actions from '@actions';
+import { ToDoList, ToDoItem } from "@models";
 
 
 function updateItem(list: ToDoList, id: number, operation: (items: im.List<ToDoItem>, index: number) => im.List<ToDoItem>): ToDoList {

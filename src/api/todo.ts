@@ -1,5 +1,5 @@
 import * as localforage from 'localforage';
-import { ToDoList, ToDoItem } from '../models';
+import { ToDoList, ToDoItem } from '@models';
 
 var localstore: LocalForage = null;
 

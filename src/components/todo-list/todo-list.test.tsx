@@ -1,8 +1,9 @@
 import React from 'react';
 import * as enzyme from 'enzyme';
 import * as im from 'immutable';
+import * as models from '@models';
 import { ToDoListPure } from './todo-list';
-import * as models from '../../models';
+
 
 const testList = new models.ToDoList({
     items: im.List([

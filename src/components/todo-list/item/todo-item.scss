@@ -1,0 +1,18 @@
+.ToDoItem {
+  .card-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  &.completed {
+    text-decoration: line-through;
+  }
+
+  label {
+    cursor: pointer;
+  }
+
+  p.description {
+    white-space: pre-line !important;
+  }
+}

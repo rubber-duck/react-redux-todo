@@ -13,7 +13,7 @@ export async function readData() {
 }
 
 export async function writeData(data: ToDoList) {
-    await localstore.setItem('data', data);
+    await localstore.setItem('data', data.toJS());
 }
 
 export async function createItem(title: string, description?: string) {
